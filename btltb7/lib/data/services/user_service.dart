@@ -24,4 +24,24 @@ class UserService {
 
     return jsonDecode(res.body);
   }
+
+  Future<Map<String, dynamic>> updateUser(String name, String email) async {
+  final res = await http.put(
+    Uri.parse('$baseUrl/users/1'),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: jsonEncode({
+      'name': name,
+      'email': email,
+    }),
+  );
+
+  if (res.statusCode != 200) {
+    throw Exception('HTTP ${res.statusCode}');
+  }
+
+  return jsonDecode(res.body);
+}
+
 }

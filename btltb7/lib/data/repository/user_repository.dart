@@ -12,4 +12,10 @@ class UserRepository {
 
     return data.map<User>((e) => User.fromJson(e)).toList();
   }
+
+  Future<User> updateUser(String name, String email) async {
+  final data = await service.updateUser(name, email);
+  return User.fromJson(data);
+}
+
 }

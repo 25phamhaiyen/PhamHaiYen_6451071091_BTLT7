@@ -13,19 +13,32 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, AppRoutes.users);
-              },
-              child: const Text('Bài 1 - User List'),
+              onPressed: () => Navigator.pushNamed(context, AppRoutes.users),
+              child: const Text('Bài 1 - User'),
             ),
-
-            const SizedBox(height: 16),
-
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, AppRoutes.product);
-              },
-              child: const Text('Bài 2 - Product Detail'),
+              onPressed: () => Navigator.pushNamed(context, AppRoutes.product),
+              child: const Text('Bài 2 - Product'),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, AppRoutes.post),
+              child: const Text('Bài 3 - Create Post'),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, AppRoutes.update),
+              child: const Text('Bài 4 - Update User'),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, AppRoutes.delete),
+              child: const Text('Bài 5 - Delete'),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, AppRoutes.search),
+              child: const Text('Bài 6 - Search'),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, AppRoutes.refresh),
+              child: const Text('Bài 7 - Refresh'),
             ),
           ],
         ),

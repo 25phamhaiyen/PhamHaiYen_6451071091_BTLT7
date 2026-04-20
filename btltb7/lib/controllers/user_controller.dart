@@ -10,4 +10,9 @@ class UserController {
   Future<List<User>> fetchUsers() {
     return repo.getUsers();
   }
+
+  Future<User> updateUser(String name, String email) {
+  return repo.updateUser(name, email);
+}
+
 }
